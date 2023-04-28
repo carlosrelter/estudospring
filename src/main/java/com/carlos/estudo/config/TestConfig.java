@@ -33,11 +33,14 @@ public class TestConfig implements CommandLineRunner {
 		User u6 = new User(null, "Jony Black", "jow@email.com", "898989564", "123456");
 		User u7 = new User(null, "Cristian Gray", "cris@email.com", "97897465416", "123456");
 		
-		Order o1 = new Order(null, Instant.parse("2019-06-23T17:56:09Z"),u1);
-		Order o2 = new Order(null, Instant.parse("2022-06-07-31T17:56:09Z"),u2);
-		Order o3 = new Order(null, Instant.parse("2021-05-23T17:56:09Z"),u1);
+		Order o1 = new Order(null, Instant.parse("2022-08-20T19:53:07Z"), u1); 
+		Order o2 = new Order(null, Instant.parse("2021-07-21T03:42:10Z"), u2); 
+		Order o3 = new Order(null, Instant.parse("2016-07-22T15:21:22Z"), u1);		
+		Order o4 = new Order(null, Instant.parse("2019-06-20T19:53:07Z"), u4); 
+		Order o5 = new Order(null, Instant.parse("2019-07-21T03:42:10Z"), u2); 
+		Order o6 = new Order(null, Instant.parse("2019-07-22T15:21:22Z"), u3);
 		
 		userRepository.saveAll(Arrays.asList(u1, u2, u3, u4, u5, u6, u7));
-		orderRepository.saveAll(Arrays.asList(o1, o2, o3));
+		orderRepository.saveAll(Arrays.asList(o1, o2, o3, o4, o5, o6));
 	}
 }
